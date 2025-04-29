@@ -1,39 +1,66 @@
-.student-layout {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    background: #121212;
-    color: white;
-  }
-  
-  .video-area {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    transition: all 0.3s ease;
-  }
-  
-  .video-area.shrink {
-    margin-right: 320px; /* Shrink video when chat is open */
-  }
-  
-  .video-area video {
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.5);
-  }
-  
-  .control-bar-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px; /* space between control buttons */
-    margin-top: 10px;
-    flex-wrap: wrap;
-    flex-direction: column; /* 👈 important: stack control bar and chat button vertically */
-  }
-  
-  
+.host-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full screen */
+  overflow: hidden; /* Prevent scrollbars */
+  background-color: #121212;
+}
+
+.main-host-view {
+  flex: 1; /* Take available vertical space except control bar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.main-host-view video {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Control buttons wrapper */
+.control-bar-wrapper {
+  padding: 0.5rem 1rem;
+  background-color: #1e1e1e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Chat Popup */
+.chat-popup {
+  position: absolute;
+  right: 1rem;
+  bottom: 5rem; /* above the control bar */
+  width: 300px;
+  max-height: 400px;
+  overflow-y: auto;
+  background: #222;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  padding: 1rem;
+  z-index: 1000;
+}
+
+/* Custom Chat Button */
+.custom-chat-button {
+  padding: 0.5rem 1rem;
+  background-color: #0078D4;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.custom-chat-button:hover {
+  background-color: #0056b3;
+}
