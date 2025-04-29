@@ -13,7 +13,7 @@ const StudentDashboard = () => {
     }
   
     try {
-      const res = await fetch(`http://localhost:5177/api/webinar/check/${roomId}`);
+      const res = await fetch(`https://webinarbackend-c8fwh5bca9ajgmdw.centralindia-01.azurewebsites.net/api/webinar/check/${roomId}`);
       const data = await res.json();
   
       if (data.exists) {

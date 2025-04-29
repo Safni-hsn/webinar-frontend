@@ -9,7 +9,7 @@ const LoginPage = ({ onLoginSuccess }) => {
   const [redirectPath, setRedirectPath] = useState(null);
 
   const handleLogin = async () => {
-    const res = await fetch("http://localhost:5177/api/auth/login", {
+    const res = await fetch("https://webinarbackend-c8fwh5bca9ajgmdw.centralindia-01.azurewebsites.net/api/auth/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ username, password }),

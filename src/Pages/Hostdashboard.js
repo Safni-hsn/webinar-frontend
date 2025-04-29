@@ -18,7 +18,7 @@ const HostDashboard = () => {
     }
   
     try {
-      const res = await fetch(`http://localhost:5177/api/webinar/start?webinarId=${roomId}`, {
+      const res = await fetch(`https://webinarbackend-c8fwh5bca9ajgmdw.centralindia-01.azurewebsites.net/api/webinar/start?webinarId=${roomId}`, {
         method: "POST",
       });
   

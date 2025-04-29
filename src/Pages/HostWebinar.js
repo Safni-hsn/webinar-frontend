@@ -20,7 +20,7 @@ const HostWebinar = ({ identity = "host1" }) => {
   const roomId = location.state?.roomId || "fallback-room-id";
 
   useEffect(() => {
-    fetch(`http://localhost:5177/api/token?identity=${identity}&room=${roomId}&isHost=true`)
+    fetch(`https://webinarbackend-c8fwh5bca9ajgmdw.centralindia-01.azurewebsites.net/api/token?identity=${identity}&room=${roomId}&isHost=true`)
       .then((res) => res.json())
       .then((data) => setToken(data.token))
       .catch((err) => console.error("❌ Token fetch failed:", err));
@@ -31,7 +31,7 @@ const HostWebinar = ({ identity = "host1" }) => {
   return (
     <LiveKitRoom
       token={token}
-      serverUrl="ws://localhost:7880"
+      serverUrl="wss://webinar-n9djmx84.livekit.cloud"
       connect={true}
       video={true}
       audio={true}

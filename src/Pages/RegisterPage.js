@@ -8,7 +8,7 @@ const RegisterPage = () => {
   const [password, setPassword] = useState("");
 
   const handleRegister = async () => {
-    const res = await fetch("http://localhost:5177/api/auth/register", {
+    const res = await fetch("https://webinarbackend-c8fwh5bca9ajgmdw.centralindia-01.azurewebsites.net/api/auth/register", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ username, password }),
