@@ -1,0 +1,39 @@
+.student-layout {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: #121212;
+    color: white;
+  }
+  
+  .video-area {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .video-area.shrink {
+    margin-right: 320px; /* Shrink video when chat is open */
+  }
+  
+  .video-area video {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  }
+  
+  .control-bar-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* space between control buttons */
+    margin-top: 10px;
+    flex-wrap: wrap;
+    flex-direction: column; /* 👈 important: stack control bar and chat button vertically */
+  }
+  
+  

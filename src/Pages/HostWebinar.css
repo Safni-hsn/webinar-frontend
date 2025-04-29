@@ -1,0 +1,136 @@
+.floating-chat {
+    position: absolute;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    height: 400px;
+    background: #1a1a1a;
+    border: 1px solid #555;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+  }
+  
+  .lk-chat-hidden {
+    display: none !important;
+  }
+
+  
+  
+  
+  .host-layout {
+    height: 100vh;
+    width: 100vw;
+    position: relative; /* Important so chat can float inside */
+    display: flex;
+    flex-direction: column;
+    background: #121212;
+    color: white;
+  }
+  
+  
+  .top-participant-strip {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    background: #1a1a1a;
+    padding: 0.5rem;
+    gap: 10px;
+  }
+  
+  .small-tile {
+    min-width: 100px;
+    height: 80px;
+    background: #333;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .small-name {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background: rgba(0,0,0,0.6);
+    font-size: 0.8rem;
+    padding: 2px 0;
+  }
+  
+  .main-host-view {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+  
+  .main-host-view video {
+    width: 90%;
+    max-width: 1200px;
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: 0 0 30px rgba(0,0,0,0.6);
+  }
+  
+  .control-bar-wrapper {
+    background: #1e1e1e;
+    padding: 10px 0;
+    border-top: 1px solid #333;
+    display: flex;
+    justify-content: center;
+  }
+
+  .custom-chat-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    width: 150px; /* Fix width */
+    height: 45px; /* Fix height */
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+    text-align: center; /* Center the text */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .custom-chat-button:hover {
+    background-color: #339af0;
+  }
+  
+  .chat-popup {
+    position: fixed;
+    right: 20px;
+    bottom: 80px;
+    width: 320px;
+    height: 450px;
+    background: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+    overflow: hidden;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+  }
+  .chat-popup .lk-chat {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+  }
+
+
+  
+  
+  
+  
+  
+  

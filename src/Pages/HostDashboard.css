@@ -1,0 +1,50 @@
+.host-dashboard {
+    padding: 2rem;
+    max-width: 600px;
+    margin: auto;
+    background-color: #f4f4f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .host-dashboard h2 {
+    margin-bottom: 1rem;
+  }
+  
+  .webinar-controls {
+    margin-bottom: 2rem;
+  }
+  
+  .input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 0.5rem 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  
+  .btn {
+    padding: 10px 15px;
+    margin-right: 10px;
+    background-color: #ddd;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .btn.primary {
+    background-color: #4f46e5;
+    color: white;
+  }
+  
+  .btn:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+  }
+  
+  .student-list ul {
+    list-style-type: square;
+    padding-left: 1.5rem;
+  }
+  
